@@ -4,6 +4,7 @@
   position: relative;
   width: 100%;
   height: 133px;
+  z-index: 10;
 }
 .inner {
   position: relative;
@@ -15,10 +16,11 @@
   position: relative;
   width: 100%;
   height: 50px;
+  background-color: #fff;
 }
 .header-top .inner {
   height: 100%;
-  padding: 0 2.4rem;
+  padding: 1.8rem 2.4rem 0.4rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -53,18 +55,107 @@
 }
 .header-top-right {
   position: relative;
+  border: 0.1rem solid #e5e5e8;
+  border-radius: 0.8rem;
+  height: 2.8rem;
 }
 .header-top-right ul {
   position: relative;
   display: flex;
+  height: 100%;
 }
 .header-top-right ul li {
 }
 .header-top-right ul li a {
+  height: 100%;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  color: #5a5b63;
+}
+.header-top-right ul li:last-child a {
+  border-left: 0.1rem solid #e5e5e8;
+  padding-left: 1.1rem;
 }
 
 .header-bottom {
-  position: relative;
+  position: sticky;
+  top: 50px;
   width: 100%;
   height: 82px;
+  background-color: #fff;
+  /* border-bottom: 1px solid #f1f1f3; */
+  /* box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.06); */
+}
+.header-bottom.sticky {
+  position: fixed;
+  top: 0;
+  border-bottom: 1px solid #f1f1f3;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.06);
+}
+.header-bottom .inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.4rem;
+}
+.logo {
+}
+.logo a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo a img {
+  width: 9rem;
+  height: 2.6rem;
+}
+.gnb {
+  position: relative;
+}
+.gnb ul {
+  position: relative;
+  height: 100%;
+  display: flex;
+  gap: 0 3.2rem;
+}
+.gnb ul li {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  height: 8.3rem;
+}
+.gnb ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.8rem;
+  height: 100%;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0b0d0f;
+}
+.etc-menu {
+  position: relative;
+}
+.etc-menu ul {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.etc-menu ul li {
+  width: 2.8rem;
+  height: 2.8rem;
+  position: relative;
+}
+.etc-menu ul li a {
+}
+.etc-menu ul li a img {
 }
