@@ -20,7 +20,7 @@
 }
 .header-top .inner {
   height: 100%;
-  padding: 1.8rem 2.4rem 0.4rem;
+  padding: 0 2.4rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -54,15 +54,15 @@
   font-weight: 700;
 }
 .header-top-right {
-  position: relative;
+  /* position: relative; */
   border: 0.1rem solid #e5e5e8;
   border-radius: 0.8rem;
   height: 2.8rem;
 }
 .header-top-right ul {
   position: relative;
-  display: flex;
   height: 100%;
+  display: flex;
 }
 .header-top-right ul li {
 }
@@ -77,12 +77,11 @@
 }
 .header-top-right ul li:last-child a {
   border-left: 0.1rem solid #e5e5e8;
-  padding-left: 1.1rem;
 }
 
 .header-bottom {
-  position: sticky;
-  top: 50px;
+  position: relative;
+  top: 0;
   width: 100%;
   height: 82px;
   background-color: #fff;
@@ -92,29 +91,27 @@
 .header-bottom.sticky {
   position: fixed;
   top: 0;
-  border-bottom: 1px solid #f1f1f3;
   box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.06);
 }
+
 .header-bottom .inner {
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 0 2.4rem;
+  display: flex;
+  justify-content: space-between;
 }
 .logo {
+  position: relative;
 }
 .logo a {
-  width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .logo a img {
-  width: 9rem;
-  height: 2.6rem;
 }
+
 .gnb {
   position: relative;
 }
@@ -122,24 +119,39 @@
   position: relative;
   height: 100%;
   display: flex;
-  gap: 0 3.2rem;
+  gap: 3.2rem;
+  /* align-items: center; */
 }
 .gnb ul li {
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  height: 8.3rem;
+  position: relative;
+}
+.gnb ul li::after {
+  content: "";
+  position: absolute;
+  top: 79px;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: center;
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: #0b0d0f;
+  transition: all 0.3s;
+}
+.gnb ul li:hover::after {
+  width: 100%;
 }
 .gnb ul li a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 0.8rem;
   height: 100%;
+  padding: 0 0.8rem;
   font-size: 2rem;
   font-weight: 700;
   color: #0b0d0f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .etc-menu {
   position: relative;
 }
@@ -151,9 +163,6 @@
   gap: 1.6rem;
 }
 .etc-menu ul li {
-  width: 2.8rem;
-  height: 2.8rem;
-  position: relative;
 }
 .etc-menu ul li a {
 }
